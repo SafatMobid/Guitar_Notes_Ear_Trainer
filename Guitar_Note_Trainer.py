@@ -1,4 +1,5 @@
 import os
+# from playsound import playsound #issue installing playsound (not compatiable with newer version of python)
 
 #print(os.getcwd()) #shows my directory
 
