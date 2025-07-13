@@ -57,5 +57,6 @@ elif ran_num_gen == 6:
     note_name = "Low_E"
     note_audio = low_e_note
 
+print("Guess the Guitar note \nPress ""r"" to replay the note, press ""q"" to quit \nChoices: ""A"","" B"","" D"","" E"","" G"","" low e""")
 playsound(note_audio)
-print(note_name)
+# print(note_name)
