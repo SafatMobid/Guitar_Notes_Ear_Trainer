@@ -25,3 +25,8 @@ low_e_note = "Audio_Clips/Lower_e_Note.mp3"
 
 
 playsound(a_note)
+playsound(b_note)
+playsound(d_note)
+playsound(e_note)
+playsound(g_note)
+playsound(low_e_note)
