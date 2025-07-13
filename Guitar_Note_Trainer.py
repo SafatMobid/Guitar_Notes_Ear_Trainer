@@ -58,3 +58,4 @@ elif ran_num_gen == 6:
     note_audio = low_e_note
 
 playsound(note_audio)
+print(note_name)
