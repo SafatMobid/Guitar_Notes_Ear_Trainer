@@ -66,6 +66,11 @@ while True:
     if guess == note_name.lower():
         print("Correct")
         break
+    elif guess == "r":
+        playsound(note_audio)
+    elif guess == "q":
+        print("Quitting")
+        break
     else:
-        print("Try again.")
+        print("Guess again")
 
