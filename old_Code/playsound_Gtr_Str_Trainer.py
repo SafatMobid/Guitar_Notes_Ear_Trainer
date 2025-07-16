@@ -1,13 +1,14 @@
-# import os
+# To use go-to terminal and run python old_Code/playsound_Gtr_Str_Trainer.py
+
 from playsound3 import playsound
 import random
 
-a_string = "Audio_Clips/A_string.mp3"
-b_string = "Audio_Clips/B_string.mp3"
-d_string = "Audio_Clips/D_string.mp3"
-e_string = "Audio_Clips/Upper_E_string.mp3"
-g_string = "Audio_Clips/G_string.mp3"
-low_e_string = "Audio_Clips/Lower_e_string.mp3"
+a_string = "old_Code/Audio_Clips/A_string.mp3"
+b_string = "old_Code/Audio_Clips/B_string.mp3"
+d_string = "old_Code/Audio_Clips/D_string.mp3"
+e_string = "old_Code/Audio_Clips/Upper_E_string.mp3"
+g_string = "old_Code/Audio_Clips/G_string.mp3"
+low_e_string = "old_Code/Audio_Clips/Lower_e_string.mp3"
 
 ran_num_gen = random.randint(1,6)
 
