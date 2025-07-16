@@ -3,12 +3,12 @@ import random
 
 pygame.mixer.init()
 
-a_string = "Audio_Clips/A_String.mp3"
-b_string = "Audio_Clips/B_String.mp3"
-d_string = "Audio_Clips/D_String.mp3"
-g_string = "Audio_Clips/G_String.mp3"
-e_string = "Audio_Clips/Upper_E_String.mp3"
-low_e_string = "Audio_Clips/Lower_e_String.mp3"
+a_string = "Audio_Clips/A_String.wav"
+b_string = "Audio_Clips/B_String.wav"
+d_string = "Audio_Clips/D_String.wav"
+g_string = "Audio_Clips/G_String.wav"
+e_string = "Audio_Clips/Upper_E_String.wav"
+low_e_string = "Audio_Clips/Lower_e_String.wav"
 
 def play_audio(path):
     pygame.mixer.music.load(path) # loads music from Audio_Clips folder
