@@ -1,57 +1,69 @@
-import pygame
+from pygame import mixer
 import random
 
-pygame.mixer.init()
+mixer.init()
 
-a_string = "Audio_Clips/A_String.wav"
-b_string = "Audio_Clips/B_String.wav"
-d_string = "Audio_Clips/D_String.wav"
-g_string = "Audio_Clips/G_String.wav"
-e_string = "Audio_Clips/Upper_E_String.wav"
-low_e_string = "Audio_Clips/Lower_e_String.wav"
+str_arry = {
+    "a_str" : "Audio_Clips/A_Str.wav",
+    "b_str" : "Audio_Clips/B_Str.wav",
+    "d_str" : "Audio_Clips/D_Str.wav",
+    "g_str" : "Audio_Clips/G_Str.wav",
+    "up_e_str" : "Audio_Clips/Up_E_Str.wav",
+    "low_e_str" : "Audio_Clips/Low_e_Str.wav"
+}
+
+# a_str = "Audio_Clips/A_Str.wav"
+# b_str = "Audio_Clips/B_Str.wav"
+# d_str = "Audio_Clips/D_Str.wav"
+# g_str = "Audio_Clips/G_Str.wav"
+# up_e_str = "Audio_Clips/Up_E_Str.wav"
+# low_e_str = "Audio_Clips/Low_e_Str.wav"
 
 def play_audio(path):
-    pygame.mixer.music.load(path) # loads music from Audio_Clips folder
-    pygame.mixer.music.play() # plays music
+    # mixer.Sound(path) # loads music from Audio_Clips folder
+    # mixer.Sound.play() # plays music
+
+    mixer.music.load(path) # loads music from Audio_Clips folder
+    mixer.music.play() # plays music
 
 ran_num_gen = random.randint(1,6)
 
 if ran_num_gen == 1:
-    string_name = "A"
-    string_audio = a_string
+    gtr_str_guess = "A"
+    gtr_str_audio = str_arry["a_str"]
     
 elif ran_num_gen == 2:
-    string_name = "B"
-    string_audio = b_string
+    gtr_str_guess = "B"
+    gtr_str_audio = str_arry["b_str"]
 
 elif ran_num_gen == 3:
-    string_name = "D"
-    string_audio = d_string
+    gtr_str_guess = "D"
+    gtr_str_audio = str_arry["d_str"]
 
 elif ran_num_gen == 4:
-    string_name = "G"
-    string_audio = g_string
+    gtr_str_guess = "G"
+    gtr_str_audio = str_arry["g_str"]
 
 elif ran_num_gen == 5:
-    string_name = "E"
-    string_audio = e_string
+    gtr_str_guess = "E"
+    gtr_str_audio = str_arry["up_e_str"]
 
 elif ran_num_gen == 6:
-    string_name = "Low e"
-    string_audio = low_e_string
+    gtr_str_guess = "e"
+    gtr_str_audio = str_arry["low_e_str"]
 
 print("Guess the Guitar string \nPress ""r"" to replay the string, press ""q"" to quit \nChoices: ""A"","" B"","" D"","" E"","" G"","" low e""")
 
-play_audio(string_audio)
+play_audio(gtr_str_audio)
 
 while True:
-    guess = input("User Guess: ").strip().lower()
-    if guess == string_name.lower():
+    user_guess = input("User Guess: ").strip().lower()
+    if user_guess == gtr_str_guess.lower():
         print("Correct")
         break
-    elif guess == "r":
-        play_audio(string_audio)
-    elif guess == "q":
+    elif user_guess == "r":
+        play_audio(gtr_str_audio)
+    elif user_guess == "q":
         print("Quitting")
         break
     else:
